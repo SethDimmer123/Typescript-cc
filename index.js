@@ -30,3 +30,35 @@ let newCar = {
 // Union
 let x = 22;
 let jackOccupation = "student";
+// Type Assertion
+let y = "a";
+y = 22;
+// Functions
+function add(x, y) {
+    return x + y;
+}
+function sayHi() {
+    console.log("Hi");
+}
+// Generics
+function copyArr(arr) {
+    return [...arr];
+}
+let numCopy = copyArr([1, 2, 3]);
+let strCopy = copyArr(["1", "2", "3"]);
+// Enums
+var EyeColor;
+(function (EyeColor) {
+    EyeColor["brown"] = "Common eye color";
+    EyeColor["blue"] = "Rare eye color";
+    EyeColor["green"] = "Very rare eye color";
+})(EyeColor || (EyeColor = {}));
+function displayStudent(student) {
+    const info = student.name + "\n" + student.age + "\n" + student.eyeColor;
+    document.body.innerText = info;
+}
+displayStudent({
+    name: "Jack",
+    age: 20,
+    eyeColor: EyeColor.brown
+});

@@ -56,5 +56,53 @@ let x:string | number = 22
 type occupation = "employed" | "student"
 let jackOccupation:occupation = "student"
 
+// Type Assertion
+let y: any = "a"
+y = <number> 22
+
+// Functions
+function add(x:number, y:number):number {
+    return x + y
+}
+
+function sayHi():void {
+    console.log("Hi")
+}
+
+// Generics
+function copyArr<T>(arr: T[]): T[] {
+    return [...arr]
+}
+
+let numCopy = copyArr<number>([1,2,3])
+let strCopy = copyArr<string>(["1","2","3"])
+
+// Enums
+
+enum EyeColor {
+    brown = "Common eye color",
+    blue = "Rare eye color",
+    green = "Very rare eye color"
+}
+
+interface Student{
+    name: string,
+    age?:number,
+    eyeColor:EyeColor
+}
+
+function displayStudent(student: Student):void {
+    const info : string = student.name + "\n" + student.age + "\n" + student.eyeColor
+    document.body.innerText = info
+}
+
+displayStudent({
+    name:"Jack",
+    age:20,
+    eyeColor:EyeColor.brown
+})
+
+
+
 
 
