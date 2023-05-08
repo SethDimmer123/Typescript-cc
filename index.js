@@ -19,3 +19,14 @@ let car = {
     brand: "Lexus",
     year: 2020
 };
+let car1 = {
+    brand: "Lexus",
+    year: 2020
+};
+let newCar = {
+    brand: "Lexus",
+    year: 2020
+};
+// Union
+let x = 22;
+let jackOccupation = "student";

@@ -25,3 +25,36 @@ let car: {
     brand: "Lexus",
     year:2020
 }
+
+// Custom types
+
+type Car = {
+    brand:string,
+    year:number
+}
+
+let car1: Car = {
+    brand: "Lexus",
+    year:2020
+}
+
+// Interface
+
+interface Car1 {
+    brand: "Lexus",
+    year:2020
+}
+
+let newCar: Car1 = {
+    brand: "Lexus",
+    year:2020
+}
+
+// Union
+let x:string | number = 22
+
+type occupation = "employed" | "student"
+let jackOccupation:occupation = "student"
+
+
+
